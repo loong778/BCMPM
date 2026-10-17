@@ -1,0 +1,62 @@
+# Configuration notes are in README.md.
+data:
+  # Configuration notes are in README.md.
+# Required input: dataset_metadata.json and per-split ROI metadata.
+  processed_data_dir: './xxx/xx/processed_data'
+
+  # Configuration notes are in README.md.
+  metadata_file: "dataset_metadata.json"
+
+# Configuration notes are in README.md.
+feature_extraction:
+  # Configuration notes are in README.md.
+  he_model: "uni"
+
+  # Configuration notes are in README.md.
+  mpm_model: "efficientnet_b3"
+
+  # Configuration notes are in README.md.
+  fusion_method: "cross_attention"
+
+  # Configuration notes are in README.md.
+  use_tacs_aware: true
+
+  tacs_fusion_strategy: multi_label_attention
+
+
+  visualize_contributions: true
+
+  skip_existing: true
+
+  # Configuration notes are in README.md.
+  fusion_dim: 256
+
+  # Configuration notes are in README.md.
+  patch_size: 224
+  patch_stride: 224
+  patch_aggregation: "mean"
+
+  # Configuration notes are in README.md.
+  filter_blank_patches: true
+  he_blank_threshold: 0.85
+  mpm_blank_threshold: 0.1
+  texture_threshold: 0.05
+
+  # Configuration notes are in README.md.
+  batch_size: 2
+  patch_batch_size: 32
+
+  # Configuration notes are in README.md.
+  save_patch_features: false
+
+  # Configuration notes are in README.md.
+# Example output directory for fused feature archives.
+  output_dir: './xxx/xx/fused_features'
+
+  # Configuration notes are in README.md.
+  device: "cuda"
+
+  # Configuration notes are in README.md.
+  cross_attention:
+    num_heads: 8
+    dropout: 0.1
